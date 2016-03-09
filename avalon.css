@@ -53,7 +53,7 @@
     background-color: #f0ad4e;
 }
 
-@media (max-width: 767px) { 
+@media screen and (max-width: 320px) {
     .narrar {
         font-size: 10px;
     }
