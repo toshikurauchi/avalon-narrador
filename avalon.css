@@ -52,12 +52,3 @@
     color: #fff;
     background-color: #f0ad4e;
 }
-
-@media screen and (max-width: 320px) {
-    .narrar {
-        font-size: 10px;
-    }
-    .btn-personagem {
-        font-size: 10px;
-    }
-}

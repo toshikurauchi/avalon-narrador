@@ -64,7 +64,7 @@ function makeSequence() {
 
 function createSound() {
     return new Howl({
-        urls: ['http://www.ime.usp.br/~kurauchi/avalon-narrador/sound/narrador.m4a'],
+        urls: ['http://toshikurauchi.github.io/avalon-narrador/sound/narrador.m4a'],
         sprite: {
             "_": [400, 450],
             " ": [400, 700],
