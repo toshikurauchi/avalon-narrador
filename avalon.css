@@ -1,0 +1,54 @@
+.btn:focus {
+    outline: 0 none;
+    color: #fff;
+}
+
+.btn:active:focus {
+    outline: 0 none;
+    opacity: 0.8;
+    color: #fff;
+}
+
+.btn {
+    border-radius: 24px;
+}
+
+.btn-personagem {
+    height: 150px;
+    font-size: 30px;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 150px 150px;
+}
+
+.btn-unselected {
+    background-color: #d9534f;
+}
+
+.btn-selected {
+    background-color: #5cb85c;
+}
+
+.morgana {
+    background-image: url('imgs/morgana.jpg') !important;
+}
+
+.mordred {
+    background-image: url('imgs/mordred.jpg') !important;
+}
+
+.oberon {
+    background-image: url('imgs/oberon.jpg') !important;
+}
+
+.lancelot {
+    background-image: url('imgs/lancelot.jpg') !important;
+}
+
+.narrar {
+    height: 150px;
+    font-size: 30px;
+    color: #fff;
+    background-color: #f0ad4e;
+}
