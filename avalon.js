@@ -33,25 +33,30 @@ function makeSequence() {
     if (lancelot1) {
         seq.push.apply(seq, ["o Lancelot do mal faz um sinal com o polegar", " "]);
     }
-    seq.push.apply(seq, ["os do mal", "_"]);
-    if (oberon) {
-        seq.push.apply(seq, ["menos o Oberon", " "]);
-        if (lancelot1) {
-            seq.push.apply(seq, ["e o Lancelot do mal", " "]);
-        }
+    if (oberon && lancelot1) {
+        seq.push.apply(seq, ["os do mal menos o Oberon e o Lancelot do mal abrem os olhos", " "]);
+    }
+    else if (oberon) {
+        seq.push.apply(seq, ["os do mal menos o Oberon abrem os olhos", " "]);
     }
     else if (lancelot1) {
-        seq.push.apply(seq, ["menos o Lancelot do mal", " "]);
+        seq.push.apply(seq, ["os do mal menos o Lancelot do mal abrem os olhos", " "]);
     }
-    seq.push.apply(seq, ["abrem os olhos", "54321"]);
+    else {
+        seq.push.apply(seq, ["os do mal abrem os olhos", " "]);
+    }
+    seq.push.apply(seq, ["54321", " "]);
     if (lancelot1) {
         seq.push.apply(seq, ["o Lancelot do mal abaixa os dedos", " "]);
     }
-    seq.push.apply(seq, ["os do mal fecham os olhos", " ", "os do mal", "_"]);
+    seq.push.apply(seq, ["os do mal fecham os olhos", " "]);
     if (mordred) {
-        seq.push.apply(seq, ["menos o Mordred", " "]);
+        seq.push.apply(seq, ["os do mal menos o Mordred fazem um sinal com o polegar", " "]);
     }
-    seq.push.apply(seq, ["fazem um sinal com o polegar", " ", "o Merlin abre os olhos", " ", "54321", " ", "os do mal abaixam os dedos e o Merlin fecha os olhos"]);
+    else {
+        seq.push.apply(seq, ["os do mal fazem um sinal com o polegar", " "]);
+    }
+    seq.push.apply(seq, ["o Merlin abre os olhos", " ", "54321", " ", "os do mal abaixam os dedos e o Merlin fecha os olhos", " "]);
     if (morgana) {
         seq.push.apply(seq, ["Merlin e Morgana fazem um sinal com o polegar e o Percival abre os olhos", " ", "54321", " ", "Merlin e Morgana abaixam os dedos e o Percival fecha os olhos", " "]);
     }
@@ -69,6 +74,7 @@ function createSound() {
             " ": [400, 450],
             "todos fecham os olhos e estendem as maos": [950, 2100],
             "o Lancelot do mal faz um sinal com o polegar": [3900, 2300],
+            "os do mal abrem os olhos": [61600, 1500],
             "os do mal menos o Oberon abrem os olhos": [7600, 2400],
             "os do mal menos o Oberon e o Lancelot do mal abrem os olhos": [10900, 3500],
             "os do mal menos o Lancelot do mal abrem os olhos": [15300, 2600],
@@ -84,7 +90,6 @@ function createSound() {
             "o Lancelot do bem e do mal abrem os olhos": [52500, 2200],
             "o Lancelot do bem o do mal fecham os olhos": [55700, 2400],
             "todos podem abrir os olhos": [58900, 1500],
-            "os do mal abrem os olhos": [50000, 1000],
         },
         onend: function() {
             if (this.sequence.length>0) this.playSequence();
@@ -103,8 +108,7 @@ Howl.prototype.playSequence = function(){
 $('#play').on('click', function(event) {
     event.preventDefault();
     sound = createSound();
-    sound.sequence = ["todos fecham os olhos e estendem as maos"];
-    //makeSequence();
+    sound.sequence = makeSequence();
     sound.playSequence();
 });
 
