@@ -64,29 +64,27 @@ function makeSequence() {
 
 function createSound() {
     return new Howl({
-        urls: ['http://toshikurauchi.github.io/avalon-narrador/sound/narrador.m4a'],
+        urls: ['http://toshikurauchi.github.io/avalon-narrador/sound/narrador.mp3'],
         sprite: {
-            "_": [400, 450],
-            " ": [400, 700],
-            "todos fecham os olhos e estendem as maos": [1100, 1950],
-            "o Lancelot do mal faz um sinal com o polegar": [4100, 2200],
-            "os do mal": [7300, 500],
-            "menos o Oberon": [8700, 850],
-            "e o Lancelot do mal": [10300, 1300],
-            "menos o Lancelot do mal": [12600, 1300],
-            "abrem os olhos": [14300, 900],
-            "54321": [16000, 5000],
-            "o Lancelot do mal abaixa os dedos": [22200, 2100],
-            "os do mal fecham os olhos": [25400, 1400],
-            "menos o Mordred": [29250, 1000],
-            "fazem um sinal com o polegar": [30700, 1500],
-            "o Merlin abre os olhos": [33000, 1400],
-            "os do mal abaixam os dedos e o Merlin fecha os olhos": [35400, 2900],
-            "Merlin e Morgana fazem um sinal com o polegar e o Percival abre os olhos": [39000, 4100],
-            "Merlin e Morgana abaixam os dedos e o Percival fecha os olhos": [43800, 3400],
-            "o Lancelot do bem e do mal abrem os olhos": [50600, 2300],
-            "o Lancelot do bem o do mal fecham os olhos": [53400, 2400],
-            "todos podem abrir os olhos": [56300, 2000],
+            " ": [400, 450],
+            "todos fecham os olhos e estendem as maos": [950, 2100],
+            "o Lancelot do mal faz um sinal com o polegar": [3900, 2300],
+            "os do mal menos o Oberon abrem os olhos": [7600, 2400],
+            "os do mal menos o Oberon e o Lancelot do mal abrem os olhos": [10900, 3500],
+            "os do mal menos o Lancelot do mal abrem os olhos": [15300, 2600],
+            "54321": [18700, 5300],
+            "o Lancelot do mal abaixa os dedos": [25300, 1900],
+            "os do mal fecham os olhos": [28000, 1500],
+            "os do mal fazem um sinal com o polegar": [30700, 1900],
+            "os do mal menos o Mordred fazem um sinal com o polegar": [33600, 3000],
+            "o Merlin abre os olhos": [37200, 1300],
+            "os do mal abaixam os dedos e o Merlin fecha os olhos": [39300, 2900],
+            "Merlin e Morgana fazem um sinal com o polegar e o Percival abre os olhos": [43300, 3900],
+            "Merlin e Morgana abaixam os dedos e o Percival fecha os olhos": [48050, 3250],
+            "o Lancelot do bem e do mal abrem os olhos": [52500, 2200],
+            "o Lancelot do bem o do mal fecham os olhos": [55700, 2400],
+            "todos podem abrir os olhos": [58900, 1500],
+            "os do mal abrem os olhos": [50000, 1000],
         },
         onend: function() {
             if (this.sequence.length>0) this.playSequence();
@@ -105,7 +103,8 @@ Howl.prototype.playSequence = function(){
 $('#play').on('click', function(event) {
     event.preventDefault();
     sound = createSound();
-    sound.sequence = makeSequence();
+    sound.sequence = ["todos fecham os olhos e estendem as maos"];
+    //makeSequence();
     sound.playSequence();
 });
 
