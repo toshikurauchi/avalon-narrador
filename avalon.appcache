@@ -1,0 +1,25 @@
+CACHE MANIFEST
+# Version 1
+
+CACHE:
+http://toshikurauchi.github.io/avalon-narrador/sound/narrador.mp3
+css/bootstrap.min.css
+css/ie10-viewport-bug-workaround.css
+starter-template.css
+avalon.css
+https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js
+js/jquery.min.js
+js/bootstrap.min.js
+js/howler.min.js
+avalon.js
+js/ie10-viewport-bug-workaround.js
+imgs/morgana.jpg
+imgs/mordred.jpg
+imgs/oberon.jpg
+imgs/lancelot.jpg
+launcher-icon-0-75x.png
+launcher-icon-1x.png
+launcher-icon-1-5x.png
+launcher-icon-2x.png
+launcher-icon-3x.png
+launcher-icon-4x.png
