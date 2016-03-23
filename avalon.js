@@ -26,27 +26,27 @@ function makeSequence() {
     var morgana = $('#morgana').hasClass('btn-selected');
     var mordred = $('#mordred').hasClass('btn-selected');
     var oberon = $('#oberon').hasClass('btn-selected');
-    var lancelot1 = $('#lancelot1').hasClass('btn-selected');
     var lancelot3 = $('#lancelot3').hasClass('btn-selected');
+    var lancelot = lancelot3 || $('#lancelot1').hasClass('btn-selected');
     
     var seq = ["todos fecham os olhos e estendem as maos", " "];
-    if (lancelot1) {
+    if (lancelot) {
         seq.push.apply(seq, ["o Lancelot do mal faz um sinal com o polegar", " "]);
     }
-    if (oberon && lancelot1) {
+    if (oberon && lancelot) {
         seq.push.apply(seq, ["os do mal menos o Oberon e o Lancelot do mal abrem os olhos", " "]);
     }
     else if (oberon) {
         seq.push.apply(seq, ["os do mal menos o Oberon abrem os olhos", " "]);
     }
-    else if (lancelot1) {
+    else if (lancelot) {
         seq.push.apply(seq, ["os do mal menos o Lancelot do mal abrem os olhos", " "]);
     }
     else {
         seq.push.apply(seq, ["os do mal abrem os olhos", " "]);
     }
     seq.push.apply(seq, ["54321", " "]);
-    if (lancelot1) {
+    if (lancelot) {
         seq.push.apply(seq, ["o Lancelot do mal abaixa os dedos", " "]);
     }
     seq.push.apply(seq, ["os do mal fecham os olhos", " "]);
