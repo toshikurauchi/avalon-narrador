@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Version 1.1
+# Version 1.1.1
 
 CACHE:
 http://toshikurauchi.github.io/avalon-narrador/sound/narrador.mp3
@@ -11,7 +11,7 @@ https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js
 js/jquery.min.js
 js/bootstrap.min.js
 js/howler.min.js
-avalon_1.0.1.js 
+avalon_1.0.2.js
 js/ie10-viewport-bug-workaround.js
 imgs/morgana.jpg
 imgs/mordred.jpg

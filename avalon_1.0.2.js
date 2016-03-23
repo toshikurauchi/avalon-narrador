@@ -105,8 +105,16 @@ Howl.prototype.playSequence = function(){
     }
 };
 
+function stop() {
+    if (sound) {
+        sound.sequence = [];
+        sound.stop();
+    }
+}
+
 $('#play').on('click', function(event) {
     event.preventDefault();
+    stop();
     sound = createSound();
     sound.sequence = makeSequence();
     sound.playSequence();
@@ -114,6 +122,5 @@ $('#play').on('click', function(event) {
 
 $('#stop').on('click', function(event) {
     event.preventDefault();
-    sound.sequence = [];
-    sound.stop();
+    stop();
 });
